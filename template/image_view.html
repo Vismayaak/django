@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            margin-left: 100px;
+        }
+
+        p {
+            font-size: 50px;
+            margin-left: 150px;
+        }
+
+        .in{
+            flex: 33%;
+        }
+
+        @media(max-width: 800px){
+            .in{
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media(max-width: 600px){
+            .in{
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        {% for x in dataa %}
+        <div class="in">
+            <p><b>{{x.title}}</b></p>
+            <img src="{{x.image.url}}" alt="alternate">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

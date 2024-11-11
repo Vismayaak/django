@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>UPDATE FORM</h1>
+    <form method="'POST">
+        {% csrf_token %}
+        <label for="title">TITLE</label>
+        <input type="text" name="title" value="{{dataa.title}}" required><br><br>
+        <label for="content">CONTENT</label>
+        <input type="text" name="content" value="{{data.content}}" required><br><br>
+        <button tpe="submit">UPDATE</button>
+
+    </form>
+</body>
+</html>

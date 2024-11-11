@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Date_of_birth</th>
+            <th>Location</th>
+            <th>Bio</th>
+        </tr>
+        {% for x in dataa %}
+        <tr>
+            <td>{{x.username}}</td>
+            <td>{{x.date_of_birth}}</td>
+            <td>{{x.location}}</td>
+            <td>{{x.bio}}</td>
+            <td><a href="{% url 'profileDelete' x.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

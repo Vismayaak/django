@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BOOK DETAILS</h1>
+    <table border="1">
+        <tr>
+            <th>Book_id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Published_date</th>
+            <th>ISBN number</th>
+        </tr>
+        {% for x in display %}
+        <tr>
+            <td>{{x.book_id}}</td>
+            <td>{{x.title}}</td>
+            <td>{{x.author}}</td>
+            <td>{{x.published_date}}</td>
+            <td>{{x.isbn}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
